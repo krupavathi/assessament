@@ -1,3 +1,5 @@
+/*home page css*/
+
 .navbar{
 	margin-left: 100px;
 	margin-right: 100px;
@@ -108,6 +110,7 @@
     color: white;
 
 }
+/*about page css*/
 .slidecontainer{
 	margin-left: 250px;
 	margin-right: 100px;
@@ -130,6 +133,7 @@
 	text-align-last: center;
 	margin-left: 300px;
 	padding-left: 20px;
+	margin-bottom: 150px;
 
 }
 #myBtn{
@@ -140,4 +144,152 @@
 	width: 120px;
 	height: 25px;
 
+}
+
+/*teampage css*/
+#team_page{
+    width: 800px;
+    height: auto;
+    margin-left: 250px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+
+}
+#about_team{
+	font-size: 30px;
+	padding: 20px;
+	color:#8a206f;
+}
+
+#about_team_images{
+	display: grid;
+	grid-template-columns:150px 150px 150px 150px;
+	grid-template-rows: 120px 120px;
+	grid-row-gap: 50px;
+	grid-column-gap: 30px;  
+	margin-top: 50px;
+}
+#about_team_tma{
+	width: 150px;
+	height: 100px;
+}
+#about_team_images_a{
+	position: relative;
+	background-color: lightgrey;
+	height: 120px;
+	
+}
+.socialicon_overlay{
+	  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  
+}
+.socialicon_container{
+	 width: 20px;
+	 height: 80px;
+	 background-color: pink;
+}
+#about_team_images_a:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_b{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_b:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_c{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_c:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_d{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_d:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_e{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_e:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_f{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_f:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_g{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_g:hover .socialicon_overlay{
+	opacity: 1;
+}
+#about_team_images_h{
+	position: relative;
+	background-color: lightgrey;
+	
+}
+
+#about_team_images_h:hover .socialicon_overlay{
+	opacity: 1;
+}
+/*event page css*/
+#event_page{
+  background: grey;
+  padding: 10px;
+  margin-top: 700px;
+    padding-top: 200px;
+}
+.eventimage{
+  height: 100px;
+  width: 100px;
+  float:left; 
+}
+.event1{
+  border-style:solid white;
+  width: 800px;
+  height: 200px;
+  background-color: white;
+  margin:50px;
+  padding: 20px;
+}
+.dltbutton{
+  background-color: blue;
+  margin-left: 400px;
+}
+.gridcontainer{
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-gap: 10px;
+  border: 1 solid blue;
+}
+.signal{
+  color: green;
 }
