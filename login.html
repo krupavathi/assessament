@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<style>
+
+li {list-style-type: none;
+font-size: 16pt;
+}
+#login_body{
+	background-color:grey;
+	width: 500px;
+	height: auto;
+	margin-left: 500px;
+}
+#logopointerimg{
+	width: 50px;
+	height: 40px;
+	padding-left: 10px;
+
+}
+#login_heading{
+	font-size: 25px;
+}
+.grid{
+ margin-left: 150px;
+ margin-top: 10px;
+ padding-top: 20px;
+ padding-bottom: 10px;
+}
+.mail {
+margin: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+
+ 
+width: 400px;
+
+background : #e9ede8;
+border: 1px soild silver;
+}
+.mail h2 {
+margin-left: 38px;
+}
+input {
+font-size: 20pt;
+}
+input:focus, textarea:focus{
+background-color: lightyellow;
+}
+input submit {
+font-size: 12pt;
+}
+.rq {
+color: #FF0000;
+font-size: 10pt;
+}
+#error_email{
+	color: red;
+}
+#submitbtn{
+	border-radius: 20px;
+	width: 150px;
+	height: 50px;
+	color: white;
+	background-color: lightblue;
+	border-color: lightblue;
+	margin-left: 100px;
+}
+.forgot{
+	color: #fff;
+	margin-top: -2px;
+	margin-left: 60px;
+	color: #598fb5;
+}
+.dont{
+	color: #fff;
+}
+#sig{
+	background-color: #d6d6d6;
+	width: 380px;
+	padding-left: 120px;
+	padding-top:20px; 
+}
+.lastsub{
+	border-radius: 10px;
+	background-color:#97aac7;
+	color:#0a5f73;
+	border-color:#97aac7;
+	width: 80px;
+	margin-left: 5px;
+}
+</style>
+</head>
+<body>
+	<div class="popup" onclick="myFunction()">popup</div>
+      <div onload='document.form1.text1.focus()' id="login_body">
+			<div class="grid">
+			<img src="./image/logopointer.png" id="logopointerimg">
+			<span id="login_heading">POINTER</span>
+		</div>
+		<div class="mail">
+		<label>Email</label>
+		<form name="form1" action="#"> 
+		<input type='text' name='text1'/><br>
+		<span id="error_email"></span><br>
+		<div class="mail">
+		<label>Password</label><input type="Password" name="Password"><br>
+		<span id="error_pswd"></span><br>
+		<input  id="submitbtn" type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/>
+		
+		</div>
+	</form>
+	<p class="forgot">Forgot password??</p>
+			<p class="dont">Don't have an account.<button class="lastsub"><b>sign up</b></button></p>
+</div>
+    <script type="text/javascript">
+function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+document.getElementById('error_email').innerHTML="enter valid email id"
+document.form1.text1.focus();
+return false;
+}
+}
+
+function myFunction() {
+  var popup = document.getElementById("login_body");
+  popup.classList.toggle("show");
+}
+    </script>
+</body>
+</html>
+
+
+
+
+

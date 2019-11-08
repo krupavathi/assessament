@@ -3,6 +3,7 @@
 <head>
 	<title>assessament</title>
 	<link rel="stylesheet" type="text/css" href="./cssfile/homepage.css">
+    <link rel="stylesheet" type="text/css" href="login.css">
     
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
@@ -14,9 +15,9 @@
      		<a href="#" id="homenavbar">HOME</a>
      		<a href="#about_page" id="aboutnavbar">ABOUT</a>
      		<a href="#team_page" id="teamnavbar">TEAM</a>
-     		<a href="#" id="eventnavbar">EVENT</a>
-     		<a href="#" id="loginnavbar">LOGIN</a>
-     		<a href="#" id="signupnavbar">SIGNUP</a>
+     		<a href="#event_page" id="eventnavbar">EVENT</a>
+     		<a href="#login_page" id="loginnavbar" >LOGIN</a>
+     		<a href="#sign_upwindow" id="signupnavbar">SIGNUP</a>
      </nav>
      <div class="homepagebdy">
 
@@ -157,36 +158,113 @@
                     </div>
                 </div>
                 <div>
-        </div>
+       </div>
          <div id="event_page">
-      <div class="gridcontainer">
-        <p id="Greetings"></p>
-        <p id="demo"></p>
-        <p>Temp<br>24F</p>
-        <p><i class="fa fa-wifi" style="color: green"></i></p>
-      </div>
-      <script type="text/javascript" src="event.js"></script>
-      <div>
-        <div class="event1">
-        <div id="parent">
-        <div id="child">
-        <img src="image/eventimag3.jpeg" class="eventimage">
-        <p class="paragraph">You can make use of an auditorium with 2,500 seats, a spacious foyer, 20 breakout rooms that can accommodate 50 to 350 persons and an expohall of 2,500 m. All this combined makes for more than 10,000 m² of opportunities and possibilities!</p>
-        </div></div>
-        <input type="button" value="delete" onClick="removeElement('parent','child');" class="dltbutton">
-        <script type="text/javascript" src="event.js"></script>
-        </div>
-        <div class="event1">
-        <img src="image/eventimag2.jpeg"  class="eventimage">
-        <p>You can make use of an auditorium with 2,500 seats, a spacious foyer, 20 breakout rooms that can accommodate 50 to 350 persons and an expohall of 2,500 m. All this combined makes for more than 10,000 m² of opportunities and possibilities</p>
-        </div>
-      <div class="event1">
-        <img src="image/eventimage1.png" class="eventimage">
-        <p>You can make use of an auditorium with 2,500 seats, a spacious foyer, 20 breakout rooms that can accommodate 50 to 350 persons and an expohall of 2,500 m. All this combined makes for more than 10,000 m² of opportunities and possibilities
-        </p>
-      </div>
-      </div>
+                <div class="gridcontainer">
+                     <p id="Greetings"></p>
+                     <p id="current_time"></p>
+                     <p id="temp">Temp<br>24F</p>
+                     <p id="signal">signal<br><br><i class="fa fa-wifi" style="color: #68ed47"></i></p>
+                      <div id="calender">
+         <body onload="displayCalendar();" id="calender">
+                <span id="calendar" class="calendarmargin" id="calender"></span>
+           </div>
+                </div>
+            
+                <div id="event_delt_fun1">
+                    <div class="event_frst" >
+                    <div id="parent">
+                    <div id="child">
+                    <img src="image/eventimag3.jpeg" class="event_image">
+                    <p class="paragraph">The film was announced in October 2014 as Avengers: Infinity War – Part 2, but Marvel later removed this title. The Russo brothers joined as directors in April 2015, with Markus and McFeely signing on to write the script a month later. </p>
+                    </div>
+                </div>
+                    <button class="edit"><i class="fas fa-edit"></i>Edit</button>
+                <button class="delete1" onclick="delete_event()"><i class="fas fa-times"></i>Delete</button>
+                </div>
+                   
+                 
+                    </div>
+                    <div  id="event_delt_fun2">
+                <div class="event_secn"  >
+                    <img src="image/eventimag2.jpeg"  class="event_image">
+                    <p>The film was announced in October 2014 as Avengers: Infinity War – Part 2, but Marvel later removed this title. The Russo brothers joined as directors in April 2015, with Markus and McFeely signing on to write the script a month later. </p>
+                    <button class="edit2"><i class="fas fa-edit"></i>Edit</button>
+                <button class="delete2" onclick="delete_event1()"><i class="fas fa-times"></i>Delete</button></div>
+                </div>
+                <div id="event_delt_fun3">
+                <div class="event_thrd">
+                    <img src="image/eventimage1.png" class="event_image">
+                    <p>The film was announced in October 2014 as Avengers: Infinity War – Part 2, but Marvel later removed this title. The Russo brothers joined as directors in April 2015, with Markus and McFeely signing on to write the script a month later. 
+                    </p>
+                    <button class="edit2"><i class="fas fa-edit"></i>Edit</button>
+                <button class="delete3" onclick="delete_event2()"><i class="fas fa-times"></i>Delete</button></div>
+                </div>
+            </div>
+         </div>
+         
+
+<div id="sign_upwindow">
+        <center>Register as a 
+            <span ><select id="sign_upwindow_heading">Resident 
+                        <option>Resident</option>
+                        <option>Work</option>
+                    </select>
+            </span>
+        </center>
+        <form name="myform">
+            <div id="signup_page_data">
+                <div class="signup_page_data_fn">Frist Name</div>
+                <div class="signup_page_data_sn">Second Name</div>
+                <div class="signup_page_data_ifn"><input type="text"  id="padding_input"  onclick="validate();"name="firstname" class="fname" >
+                    <br><span id="signup_page_data_ifn_error"></span></div>
+                <div class="signup_page_data_isn"><input type="text" id="padding_input"name="sceondname"></div>
+                <div class="signup_page_data_fn">Email</div>
+                <div  class="signup_page_data_sn">Phone No</div>
+                <div class="signup_page_data_ifn"><input type="text"  id="padding_input"name="email"></div>
+                <div class="signup_page_data_isn"><input type="text"  id="padding_input" name="phoneno" id="phoneno"></div>
+                <div class="signup_page_data_fn">Street Address1</div>
+                <div  class="signup_page_data_sn">Street Address2</div>
+                <div class="signup_page_data_ifn"><input type="text" id="padding_input" placeholder ="Street Address1"></div>
+                <div  class="signup_page_data_isn"><input type="text" id="padding_input" placeholder ="Street Address2"></div>
+                <div class="signup_page_data_fn">City</div>
+                <div id="signup_page_data_state">State</div>
+                <div>Zip code</div>
+                <div class="signup_page_data_ifn"><input type="text" id="padding_input" placeholder ="city"></div>
+                <div ><input type="text" placeholder ="state"></div>
+                <div><input type="text" placeholder ="zip code"></div>
+                <div class="signup_page_data_fn">Create Passward</div>
+                <div class="signup_page_data_sn">Verify Passward</div>
+                <div class="signup_page_data_ifn"><input type="text"  id="padding_input"name="createpassward"></div>
+                <div class="signup_page_data_isn"><input type="text" id="padding_input"name="verifypassward"></div>
+            </div>
+            <center><button id="signup_submit_button" onsubmit =" returnvalidatefrstname()">SUBMIT</button></center>
+            <div id="Already_account">Already I have an account<button id="signup_login_button" onclick="">login</button></div>
+        </form>
     </div>
+    <div id="login_page">
+        
+      <div onload='document.form1.text1.focus()' id="login_body">
+            <div class="grid">
+        <div class="mail">
+             <img src="./image/logopointer.png" id="logopointerimg">
+            <span id="login_heading">POINTER</span><br>
+        <label class="login_padding">Email</label>
+        <form name="form1" action="#login_page"> 
+        <input  class="login_padding" type='text' name='text1'/><br>
+        <span id="error_email"></span>
+        <div class="mail">
+        <label class="login_padding">Password</label><br><input class="login_padding"type="Password" name="Password"><br>
+        <span id="error_pswd"></span><br>
+        <input   id="submitbtn" type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/>
+        
+        </div>
+    </form>
+    <p class="forgot">Forgot password??</p>
+            <p class="dont">Don't have an account.<button class="lastsub"><b>sign up</b></button></p>
+    </div>
+
+
      <script src="jsfile/homefile.js"></script>
 </body>
 </html>

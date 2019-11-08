@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
@@ -110,62 +110,165 @@
 
 </body>
 </html>
- -->
- <div id="event_page">
-			<div class="gridcontainer">
-				<p id="Greetings"></p>
-				<p id="demo"></p>
-				<p>Temp<br>24F</p>
-				<p><i class="fa fa-wifi" style="color: green"></i></p>
-			</div>
-			<script type="text/javascript" src="event.js"></script>
-			<div>
-				<div class="event1">
-				<div id="parent">
-				<div id="child">
-				<img src="images/imag1.jpeg" class="eventimage">
-				<p class="paragraph">You can make use of an auditorium with 2,500 seats, a spacious foyer, 20 breakout rooms that can accommodate 50 to 350 persons and an expohall of 2,500 m. All this combined makes for more than 10,000 m² of opportunities and possibilities!</p>
-				</div></div>
-				<input type="button" value="delete" onClick="removeElement('parent','child');" class="dltbutton">
-				<script type="text/javascript" src="event.js"></script>
-				</div>
-				<div class="event1">
-				<img src="images/imag2.jpeg"  class="eventimage">
-				<p>You can make use of an auditorium with 2,500 seats, a spacious foyer, 20 breakout rooms that can accommodate 50 to 350 persons and an expohall of 2,500 m. All this combined makes for more than 10,000 m² of opportunities and possibilities</p>
-				</div>
-			<div class="event1">
-				<img src="images/imag3.jpeg" class="eventimage">
-				<p>You can make use of an auditorium with 2,500 seats, a spacious foyer, 20 breakout rooms that can accommodate 50 to 350 persons and an expohall of 2,500 m. All this combined makes for more than 10,000 m² of opportunities and possibilities
-				</p>
-			</div>
-			</div>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>login</title>
+		<link rel="stylesheet" type="text/css" href="login.css">
+	</head>
+		<body onload='document.form1.text1.focus()'>
+			<div class="grid">
+			<img src="images/images.png" class="logo">
+			<h1>Pointer</h1>
+		</div>
+		<div class="mail">
+		<label>Email</label>
+		<form name="form1" action="#"> 
+		<input type='text' name='text1'/><br><br>
+		<div class="mail">
+		<label>Password</label><input type="Password" name="Password"><br><br>
+		<li class="submit"><input type="submit" name="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)"/></li>
+		</form>
+		</div>
+		<script src="login.js"></script>
+	</body>
+</html>
+
+
+li {list-style-type: none;
+font-size: 16pt;
+}
+.mail {
+margin: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 400px;
+background : #D8F1F8;
+border: 1px soild silver;
+}
+input {
+font-size: 20pt;
+}
+input:focus, textarea:focus{
+background-color: lightyellow;
+}
+input submit {
+font-size: 12pt;
+}
+.grid{
+	display: grid;
+	grid-template-columns: 100px 100px;
+	margin-left: 400px;
+}
+.logo{
+	width: 70px;
+	height: 70px;
+}
+
+function ValidateEmail(inputText)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+
+
+
+
+	<div id="bcolor">
+			<div id="pointer"><span><img id="logoimage" src="./images/logo.png"> Pointer.</span></div>
+			<form id="sig">
+				<label>E-mail</label><br><br>
+				<input id="in" type="E-mail" name="E-mail"><br><br>
+				<label>Password</label><br><br>
+				<input id="in" type="Password" name="Password"><br><br>
+				<input class="firstsub" type="submit" name="submit">
+			<p class="forgot">Forgot password??</p>
+			<p class="dont">Don't have an account.<button class="lastsub"><b>sign up</b></button></p>
+			</form>
 		</div>
 
 
-		<!-- js -->
-		var myDate = new Date();
-var hrs = myDate.getHours();
-var greet;
-if (hrs < 12)
-greet = 'Good Morning';
- else if (hrs >= 12 && hrs <= 17)
-  greet = 'Good Afternoon';
-else if (hrs >= 17 && hrs <= 24)
-greet = 'Good Evening';
-document.getElementById("Greetings").innerHTML = greet;
-
-
-var d = new Date();
-document.getElementById("demo").innerHTML = d;
-
-
-function removeElement(parentDiv, childDiv){
-     if (childDiv == parentDiv) {
-          alert("The parent div cannot be removed.");
-     }
-     else if (document.getElementById(childDiv)) {     
-          var child = document.getElementById(childDiv);
-          var parent = document.getElementById(parentDiv);
-          parent.removeChild(child);
-     }
+		#signup{
+	background-color: #d5dbf0;
+	width: 700px;
+}
+#resident{
+	border-radius: 20px;
+	border-color: #0099ff;
+	color: #0099ff;
+	width: 100px;
+	padding: 5px;
+	margin-left: 50px;
+	margin-top: 10px;
+}
+#info{
+	display: grid;
+	grid-template-columns: 150px 150px 150px 150px;
+	grid-column-gap: 12px;
+	grid-row-gap: 8px;
+	margin-left: 20px;
+}
+.fnp{
+	padding-top: 10px;
+}
+#secn{
+	grid-column: 1/3;
+}
+.fn{
+	margin-top: 10px;
+}
+#sn{
+	grid-column: 3/5;
+	padding-top: 10px;
+	}
+#isec{
+	grid-column: 3/5
+}
+#state{
+	grid-column: 3/4;
+}
+#fnn{
+	padding-right: 130px;
+	padding-top: 5px;
+}
+#zip{
+	width: 135px;
+}
+#loginsubmit{
+	margin-top: 10px;
+	border-radius: 20px;
+	width: 110px;
+	height: 30px;
+	border-color:#00ccff;
+	background-color:#00ccff;
+	color: #fff;
+	font-size: 15px;
+}
+#already{
+	text-align: center;
+	color: white;
+}
+#login{
+	margin-top: 10px;
+	border-color: #a2afb8;
+	background-color: #a2afb8;
+	width: 60px;
+	border-radius: 20px;
+	margin-left: 8px;
+	color: #0099ff;
 }
